@@ -1,0 +1,112 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Credits/darkness.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Credits/ALONE IN THE DARK 2.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Final_Credits.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Audio/house_openSound_mp3cut.net.ogg" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+outline_size = 2
+outline_color = Color( 0.556863, 0.192157, 0.0156863, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Final_Credits" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511.163, 301.999 )
+scale = Vector2( 0.8079, 0.592831 )
+texture = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="Control"]
+margin_left = 92.0
+margin_top = 309.0
+margin_right = 236.0
+margin_bottom = 347.0
+custom_fonts/font = SubResource( 1 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Message" type="Label" parent="."]
+margin_left = 164.234
+margin_top = 32.0917
+margin_right = 831.234
+margin_bottom = 64.0917
+custom_fonts/font = SubResource( 2 )
+text = "Thanks for playing, hope you enjoy!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Seasson2" type="Label" parent="."]
+margin_left = 592.0
+margin_top = 524.0
+margin_right = 993.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 3 )
+text = "Comming Soon..."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ALONE IN THE DARK 2" type="Sprite" parent="."]
+position = Vector2( 516.205, 311.287 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+
+[node name="Sound_Background" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="ShowCover" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="Show_Labels" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="Show_CommingSoon" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+autostart = true
+
+[node name="Show_Controls" type="Timer" parent="."]
+wait_time = 13.5
+one_shot = true
+autostart = true
+[connection signal="pressed" from="Control/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="timeout" from="ShowCover" to="." method="_on_ShowCover_timeout"]
+[connection signal="timeout" from="Show_Labels" to="." method="_on_Show_Labels_timeout"]
+[connection signal="timeout" from="Show_CommingSoon" to="." method="_on_Show_CommingSoon_timeout"]
+[connection signal="timeout" from="Show_Controls" to="." method="_on_Show_Controls_timeout"]

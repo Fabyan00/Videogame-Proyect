@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Credits/ALONE IN THE DARK 2.png" type="Texture" id=1]
+
+[node name="Seasson2_Cover" type="Node2D"]
+
+[node name="Cover" type="Sprite" parent="."]
+position = Vector2( 516.205, 311.287 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )

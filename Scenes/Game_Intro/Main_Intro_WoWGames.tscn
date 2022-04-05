@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Game_Intro/Intro_WoWGames.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Video/WoWGames_Final - Reparado.webm" type="VideoStream" id=2]
+
+[node name="Main_Intro_WoWGames" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1022.0
+margin_bottom = 600.0
+stream = ExtResource( 2 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

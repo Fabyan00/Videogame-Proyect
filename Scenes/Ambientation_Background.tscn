@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Game_Intro/Ambientation_Background.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Audio/Background_Scenes_Sound.ogg" type="AudioStream" id=2]
+
+[node name="Ambientation_Background" type="AudioStreamPlayer"]
+stream = ExtResource( 2 )
+script = ExtResource( 1 )

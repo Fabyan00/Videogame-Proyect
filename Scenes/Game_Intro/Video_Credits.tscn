@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Video/Alone_Credits.webm" type="VideoStream" id=1]
+[ext_resource path="res://Scenes/Game_Intro/Video_Credits.gd" type="Script" id=2]
+
+[node name="Video_Credits" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="VideoPlayer" parent="."]
+margin_right = 1024.0
+margin_bottom = 601.0
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Read_Credits" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+[connection signal="finished" from="Credits" to="." method="_on_Credits_finished"]
+[connection signal="timeout" from="Read_Credits" to="." method="_on_Read_Credits_timeout"]

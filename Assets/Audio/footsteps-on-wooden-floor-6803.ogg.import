@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/footsteps-on-wooden-floor-6803.ogg-d8b809587398d5a84c2bea957a0878fd.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/footsteps-on-wooden-floor-6803.ogg"
+dest_files=[ "res://.import/footsteps-on-wooden-floor-6803.ogg-d8b809587398d5a84c2bea957a0878fd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

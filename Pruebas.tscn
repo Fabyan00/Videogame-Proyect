@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Characters/Main_Character_Animation.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/enemy/Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Lives.tscn" type="PackedScene" id=3]
+
+[node name="Pruebas" type="Node2D"]
+
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 87.9494, 91.9829 )
+
+[node name="Lives" parent="." instance=ExtResource( 3 )]
+
+[node name="Main_Character_Animation" parent="." instance=ExtResource( 1 )]
+position = Vector2( 687.308, 424.264 )

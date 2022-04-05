@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/monster-scream-sound-effect.ogg-b4bb523f0f745c846841eecbcd856e27.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/monster-scream-sound-effect.ogg"
+dest_files=[ "res://.import/monster-scream-sound-effect.ogg-b4bb523f0f745c846841eecbcd856e27.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
